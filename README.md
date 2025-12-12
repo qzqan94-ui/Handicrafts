@@ -132,6 +132,52 @@
   color: #000;                /* لون النص */
 }
 
+.vertical-header{writing-mode:vertical-rl;}
+input[type="checkbox"] {
+    margin:0;
+    padding:0;
+}
+td input[type="checkbox"] {
+    float: right;
+    margin-left: 4px;
+}
+td {
+  position: relative;
+  padding-right: 0 !important; /* إزالة المسافة من اليمين */
+}
+
+td input[type="checkbox"] {
+  position: absolute;
+  right: -65px;                /* الصندوق يلتصق تمامًا باليمين */
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+.craft-wrapper {
+  width: 100%;
+  overflow-x: auto;   /* يسمح بتمرير أفقي */
+}
+
+.craft-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.craft-table td,
+.craft-table th {
+  white-space: nowrap;   /* يمنع تكسر النص */
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* للجوال */
+@media (max-width: 768px) {
+  .craft-table td,
+  .craft-table th {
+    font-size: 10px;
+    padding: 3px;
+  }
+}
 
 </style>
 </head>
@@ -143,8 +189,9 @@
   <table>
     <tr>
       <td rowspan="2" style="border:none; width:130px;">
-        <img src="Logo.jpg" alt="Logo" class="header-logo">
-      </td>
+    <img src="Logo.jpg" alt="Logo" style="width:200px; height:auto;">
+</td>
+
       <td class="no-border" style="font-size:20px; font-weight:bold;">استمارة الحرف اليدوية</td>
       <td rowspan="2" class="no-border" style="width:130px;"></td>
     </tr>
@@ -172,12 +219,12 @@
   <table class="basic-info-table">
 
    <tr class="header-row">
-  <td rowspan="4" class="side-title">معلومات أساسية</td>
-  <td>اسم مُنفذ البيع</td>
+  <td rowspan="4" class= vertical-header>معلومات أساسية</td>
+  <td>اسم منفذ البيع</td>
   <td>اسم المالك</td>
   <td> السجل المدني</td>
   <td>السجل التجاري</td>
-  <td>رقم الجوال</td>
+  <td>رقم الهاتف</td>
 </tr>
 
     <tr>
@@ -189,9 +236,9 @@
     </tr>
     <tr class="header-row"></trclass>
         <td>اسم السوق </td>
-        <td>المنطقة</td>
          <td>المحافظة</td>
-      <td>الفرع</td>
+         <td>المنطقة</td>
+         <td>الفرع</td>
       <td>رقم رخصة حرفي</td>
     </tr>
     <tr>
@@ -202,10 +249,300 @@
       <td><input type="text"></td>
     </tr>
   </table>
+<!-- جدول الحرف اليدوية -->
+<h3 style="margin-top:25px; text-align:center;">الحرف اليدوية</h3>
+<div class="craft-wrapper">
+<table class="craft-table">
+    ...
+
+       <th rowspan="20" class="vertical-header" style="background:#e5e5e5; color:#000;">
+    الحرفة
+</th>
+
+               
+        <th style="background:#e5e5e5; color:#000; font-weight:bold;">
+    الحرفة
+</th>
+
+        
+     <td><input type="checkbox" style="margin:0 2px 0 0;">النقش والرسومات</td>
+
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+<th rowspan="2" style="background:#e5e5e5; color:#000; font-weight:bold;">
+    الحرفة
+</th>
+
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+<td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>  
+  <th rowspan="2" style="background:#e5e5e5; color:#000; font-weight:bold;">
+    الحرفة
+</th>
+
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>لرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+        
+        
+        <th rowspan="2" style="background:#e5e5e5; color:#000; font-weight:bold;">
+    الحرفة
+</th>
+
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+     <th rowspan="2" style="background:#e5e5e5; color:#000; font-weight:bold;">
+    الحرفة
+</th>
+
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>     
+        
+     <th rowspan="2" style="background:#e5e5e5; color:#000; font-weight:bold;">
+    الحرفة
+</th>
+
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>        
+        <th style="background:#e5e5e5; color:#000; font-weight:bold;">
+    الحرفة
+</th>
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+ <th style="background:#e5e5e5; color:#000; font-weight:bold;">
+    الحرفة
+</th>
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+        
+        
+        <th style="background:#e5e5e5; color:#000; font-weight:bold;">
+    الحرفة
+</th>
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+        
+        <th style="background:#e5e5e5; color:#000; font-weight:bold;">
+    الحرفة
+</th>
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+ <th style="background:#e5e5e5; color:#000; font-weight:bold;">
+    الحرفة
+</th>
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+        
+        
+      
+       <th rowspan="2" style="background:#e5e5e5; color:#000; font-weight:bold;">
+    الحرفة
+</th>
+
+        
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+        
+        
+
+ <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+        <td>النقش والرسومات
+        <input type="checkbox"></td>
+         <td>النقش والرسومات
+        <input type="checkbox"></td>
+    </tr>
+
+</table>
+
 
 </div>
 </div>
 </div>
+
 <script>
 // مساحة للسكربت إن احتجت
 </script>

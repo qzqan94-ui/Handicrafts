@@ -148,7 +148,7 @@ td {
 
 td input[type="checkbox"] {
   position: absolute;
-  right: -65px;                /* الصندوق يلتصق تمامًا باليمين */
+  right: -100px;                /* الصندوق يلتصق تمامًا باليمين */
   top: 50%;
   transform: translateY(-50%);
   margin: 0;
